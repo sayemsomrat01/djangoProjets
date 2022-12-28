@@ -2,9 +2,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def homepage(request):
-    return render(request, 'index.html')
-
 
 def analyzer(request):
     getTexts = request.GET.get('text', 'default')
@@ -50,5 +47,5 @@ def analyzer(request):
     else:
         return HttpResponse("Error!")
     return render(request, 'analyze.html', params)
-def analyzerTwo(request):
-    return render(request,'index2.html')
+def home(request):
+    return render(request,'index.html')
